@@ -1,12 +1,16 @@
 package com.example.employeebook;
 
+import org.apache.commons.lang3.StringUtils;
+
+import static org.apache.commons.lang3.StringUtils.*;
+
 public class Employee {
     private String name;
     private String surName;
 
     public Employee(String name, String surName) {
-        this.name = name;
-        this.surName = surName;
+        this.name = capitalize(name.toLowerCase());
+        this.surName = capitalize(surName.toLowerCase());
     }
 
     public String getName() {
